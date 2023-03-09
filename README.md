@@ -109,7 +109,9 @@ Rviz支持许多常见的传感器的数据，比如激光雷达、相机等。
 3. 观察右侧状态栏目Views和中间的界面
 在Views栏目中，你可以调整你的观察视角。
 默认的相机模式为轨道相机，当移动相机时，中间界面出现的黄色圆盘即是相机的焦点。
+
 ![](https://img-blog.csdnimg.cn/2c18b313bfbb40aea5c90c34695bc2a0.png)
+
 你可以通过这些按键调整视角：
  - 鼠标左键：长按左键拖动旋转视野
  - 鼠标中键：移动焦点位置
@@ -262,7 +264,11 @@ gnome-terminal  -- bash -c "ros2 topic info -v /cmd_vel; exec bash"
 ```bash
 gnome-terminal  -- bash -c "ros2 topic echo /cmd_vel; exec bash"
 ```
+
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e091ed5bc60d40fba8c99b13dd96976b.png)
+
+
 **note**
 如果你希望深入了解ROS话题机制，请查看[背景信息和资源](#backinfo)
 
@@ -308,7 +314,10 @@ gazebo
  - 鼠标中键：旋转视野
  - 鼠标右键：放大/缩小视野
 
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/eb5b8f35dc074b328281d7bf1ab96417.png)
+
+
 在Gazebo的上方工具栏中，你可以使用这几个按钮来平移、旋转调整模型。
 如下是将一个实体模型旋转朝向，按住Shift可以帮助你更精确地调整。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/5ff45095df9d4f81a55a00b83c4f71a9.png)
