@@ -54,9 +54,17 @@ After ROS 2 installation, download the Mini Pupper ROS package in the workspace.
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/mangdangroboticsclub/mini_pupper_ros.git -b ros2
-vcs import < mini_pupper_ros/.minipupper.repos --recursive
+vcs import < mini_pupper_ros/.minipupper.repos --recursive  # requires vcstool
 ```
-
+**Notes:**
+If you haven't installed vcstool, please install vcstool first.
+```bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install python3-vcstool
+```
 #### 1.3 Build and install all ROS packages
 ```bash
 cd ~/ros2_ws
@@ -98,11 +106,21 @@ After ROS 2 installation, download the Mini Pupper ROS package in the workspace.
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/mangdangroboticsclub/mini_pupper_ros.git -b ros2
-vcs import < mini_pupper_ros/.minipupper.repos --recursive
+vcs import < mini_pupper_ros/.minipupper.repos --recursive  # requires vcstool
 # compiling gazebo and cartographer on Raspberry Pi is not recommended
 touch mini_pupper_ros/mini_pupper_gazebo/AMENT_IGNORE
 touch mini_pupper_ros/mini_pupper_navigation/AMENT_IGNORE
 ```
+**Notes:**                                             
+If you haven't installed vcstool, please install vcstool first.
+```bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install python3-vcstool
+```
+ 
 #### 2.4 Build and install all ROS packages
 
 
@@ -115,10 +133,10 @@ pip install transforms3d
 colcon build --symlink-install
 ```
 **Tips:**
-```diff
-
-+ If the Raspberry Pi has less than 4GB memory:
-+ Try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install` instead of `colcon build --symlink-install`
+```bash
+# If the Raspberry Pi has less than 4GB memory, please try
+MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install
+# instead of `colcon build --symlink-install`
 ```
 
 </details>
@@ -199,11 +217,11 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 Open 2 terminals and ssh login to Mini Pupper on both.
 
 ```bash
-# Terminal 1 (ssh)
+# Terminal 1 (ssh to real mini pupper)
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
 ros2 launch mini_pupper_bringup bringup.launch.py
 
-# Terminal 2 (ssh)
+# Terminal 2 (on PC)
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control Mini Pupper with the keyboard
 ```
