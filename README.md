@@ -198,7 +198,7 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 
 Open 2 terminals and ssh login to Mini Pupper on both.
 
-```sh
+```bash
 # Terminal 1 (ssh)
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
 ros2 launch mini_pupper_bringup bringup.launch.py
@@ -207,6 +207,21 @@ ros2 launch mini_pupper_bringup bringup.launch.py
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control Mini Pupper with the keyboard
 ```
+#### 2.2 Test Navigation
+ - bringup on real mini pupper
+ ```bash
+ros2 launch mini_pupper_bringup bringup.launch  # on real mini pupper
+ ```
+ - Mapping on PC
+ ```bash
+ ros2 launch mini_pupper_navigation slam.launch  # on PC
+ ```
+ - Navigation on PC
+  ```bash
+ ros2 launch mini_pupper_navigation navigation.launch  # on PC
+ ```
+ 3. 电脑上，跑导航。记得先把maps文件夹里的mymap.pbstream换成自己的
+ 
 </details>
 
 ## FAQ
