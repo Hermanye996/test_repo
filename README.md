@@ -38,9 +38,9 @@ This repository contains the ROS 2 packages for Mini Pupper.
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
 <summary>Click here for PC Setup</summary>
-```diff-
-Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
-Ubuntu 22.04 + ROS 2 Humble is required.
+```diff
+- Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
+- Ubuntu 22.04 + ROS 2 Humble is required.
 ```
 #### 1.1 ROS 2 installation
 Please follow the [installation document for ROS Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) or use the [unofficial ROS 2 installation script](https://github.com/Tiryoh/ros2_setup_scripts_ubuntu).
