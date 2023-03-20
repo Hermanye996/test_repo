@@ -30,10 +30,12 @@ This repository contains the ROS2 packages for Mini Pupper.
 * To control Mini Pupper using visualize tools, "1. PC Setup" and "2. Mini Pupper Setup" is required.
 
 
+<details>
+<summary>### 1. PC Setup
 
-### 1. PC Setup
+PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  </summary>
 
-PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
+
 :::note
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 Ubuntu 22.04 + ROS 2 Humble is required.  
@@ -59,7 +61,7 @@ pip install transforms3d
 colcon build --symlink-install
 ```
 
-
+</details>
 
 
 ### 2. Mini Pupper Setup
