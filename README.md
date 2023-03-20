@@ -1,8 +1,8 @@
 
-[![ROS2 VERSION](https://img.shields.io/badge/ROS-ROS%202%20Humble-brightgreen)](http://docs.ros.org/en/humble/index.html)\
-&nbsp;&nbsp;\
-[![Ubuntu VERSION](https://img.shields.io/badge/Ubuntu-22.04-brightgreen)](https://ubuntu.com/)\
-&nbsp;&nbsp;\
+[![ROS2 VERSION](https://img.shields.io/badge/ROS-ROS%202%20Humble-brightgreen)](http://docs.ros.org/en/humble/index.html)
+&nbsp;&nbsp;
+[![Ubuntu VERSION](https://img.shields.io/badge/Ubuntu-22.04-brightgreen)](https://ubuntu.com/)
+&nbsp;&nbsp;
 [![DEPENDENCIES](https://img.shields.io/badge/dependencies-mini__pupper__bsp-blue)](https://github.com/mangdangroboticsclub/mini_pupper_bsp)
 &nbsp;&nbsp;
 [![LICENSE](https://img.shields.io/badge/license-Apache--2.0-informational)](https://github.com/mangdangroboticsclub/mini_pupper_ros/blob/ros2/LICENSE)
