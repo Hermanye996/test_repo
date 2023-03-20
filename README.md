@@ -13,8 +13,8 @@
 # Mini Pupper ROS 2
 
 Mini Pupper is an open source 12-DOF quadruped robot,supporting ROS 2 (Robot Operating System) designed for educational purposes, research and experimentation.
-With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on Stanford QuadrupedRobot project. 
-This repository contains the ROS2 packages for Mini Pupper.
+With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on Stanford QuadrupedRobot project.  
+This repository contains the ROS 2 packages for Mini Pupper.
 
 
 ## Features
