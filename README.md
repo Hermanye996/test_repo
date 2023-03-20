@@ -118,12 +118,14 @@ instead of `colcon build --symlink-install`
 
 
 ## Usage
-To run the Mini Pupper ROS2, follow these steps.
+To try the Mini Pupper ROS2, follow these steps to run the examples.
 
 
 
-### 1. For PC
+### 1. PC
 **These steps are only for PC.**
+<details>
+<summary>Click here for examples on PC</summary>
 
 
 #### 1.1 Test in Rviz2
@@ -178,11 +180,12 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 :::
 
 
+</details>
 
-
-### 2. For Mini Pupper
+### 2. Mini Pupper
 **These steps are only for real Mini Pupper.**
-
+<details>
+<summary>Click here for examples on real Mini Pupper</summary>
 
 #### 2.1 Test walk
 
@@ -197,6 +200,7 @@ ros2 launch mini_pupper_bringup bringup.launch.py
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control Mini Pupper with the keyboard
 ```
+</details>
 
 ## FAQ
 
@@ -231,7 +235,7 @@ Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTIN
 
 ## License
 
-```sh
+```
 Copyright 2022-2023 MangDang
 
 Licensed under the Apache License, Version 2.0 (the "License");
