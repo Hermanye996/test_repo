@@ -72,9 +72,9 @@ colcon build --symlink-install
 Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.  
 <details>
 <summary>Click here for Mini Pupper Setup</summary>
-**Note**
-Do not apply these Mini Pupper Setup commands to your PC.
-Ubuntu 22.04 + ROS 2 Humble is required.  
+> **Note**
+> Do not apply these Mini Pupper Setup commands to your PC.
+> Ubuntu 22.04 + ROS 2 Humble is required.  
 
 
 #### 2.1 mini_pupper_bsp installation
