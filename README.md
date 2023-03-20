@@ -1,35 +1,27 @@
 
-![ROS2 VERSION](https://img.shields.io/badge/ROS-ROS%202%20Humble-brightgreen)
-
-![Ubuntu VERSION](https://img.shields.io/badge/Ubuntu-22.04-brightgreen)
-
-![DEPENDENCIES](https://img.shields.io/badge/dependencies-mini__pupper__bsp-blue)
-
-![LICENSE](https://img.shields.io/badge/license-Apache--2.0-informational)
-
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FLeggedRobot)
+![ROS2 VERSION](https://img.shields.io/badge/ROS-ROS%202%20Humble-brightgreen)![Ubuntu VERSION](https://img.shields.io/badge/Ubuntu-22.04-brightgreen)![DEPENDENCIES](https://img.shields.io/badge/dependencies-mini__pupper__bsp-blue)![LICENSE](https://img.shields.io/badge/license-Apache--2.0-informational)![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FLeggedRobot)
 
 
 # Mini Pupper ROS 2
----
+
 Mini Pupper is an open source 12-DOF quadruped robot,supporting ROS 2 (Robot Operating System) designed for educational purposes, research and experimentation.
 With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on Stanford QuadrupedRobot project. 
 This repository contains the ROS2 packages for Mini Pupper.
 
----
+
 ## Features
 - Support for ROS 2 Humble and Ubuntu 22.04 LTS
 - Built-in ROS 2 Interface for Stanford QuadrupedRobot
 - ROS2 SLAM and Navigation functions supported
 
----
+
 ## Installation
 
 * To use Gazebo simulator, "1. PC Setup" is required.
 * To control Mini Pupper, "2. Mini Pupper Setup" is required.
 * To control Mini Pupper using visualize tools, "1. PC Setup" and "2. Mini Pupper Setup" is required.
 
----
+
 
 ### 1. PC Setup
 
@@ -59,7 +51,7 @@ pip install transforms3d
 colcon build --symlink-install
 ```
 
----
+
 
 
 ### 2. Mini Pupper Setup
@@ -108,18 +100,18 @@ try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install`
 instead of `colcon build --symlink-install`
 :::
 
-___
+
 
 
 
 ## Usage
 To run the Mini Pupper ROS2, follow these steps.
 
-___
+
 
 ### 1. For PC
 **These steps are only for PC.**
-___
+
 
 #### 1.1 Test in Rviz2
 View Mini Pupper model in Rviz2 and control it with keyboard.
@@ -133,7 +125,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control robot dog with the keyboard
 ```
 
-___
+
 
 #### 1.2 Test in Gazebo
 Control the mini pupper in Gazebo with keyboard.
@@ -146,7 +138,7 @@ ros2 launch mini_pupper_gazebo gazebo.launch.py rviz:=true
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control robot dog with the keyboard
 ```
-___
+
 #### 1.3  Test Cartographer in Gazebo
 Try SLAM in Gazebo with keyboard.
 
@@ -172,13 +164,13 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 ```
 :::
 
-___
+
 
 
 ### 2. For Mini Pupper
 **These steps are only for real Mini Pupper.**
 
----
+
 #### 2.1 Test walk
 
 Open 2 terminals and ssh login to Mini Pupper on both.
@@ -192,7 +184,6 @@ ros2 launch mini_pupper_bringup bringup.launch.py
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control Mini Pupper with the keyboard
 ```
----
 
 ## FAQ
 
@@ -218,12 +209,12 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
   ```
   
   
- ---
+
   
 ## Contributing
 Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) before submitting a pull request.
 
----
+
 
 ## License
 
@@ -242,7 +233,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
----
 
 ## Acknowledgments 
 
