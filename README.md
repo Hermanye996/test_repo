@@ -124,7 +124,7 @@ colcon build --symlink-install
 </details>
 
 
-## Usage
+## Quick Start
 To try the Mini Pupper ROS2, follow these steps to run the examples.
 
 
