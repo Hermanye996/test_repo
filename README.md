@@ -40,7 +40,7 @@ PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupp
 <summary>Click here for PC Setup</summary>
 :::note
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
-Ubuntu 22.04 + ROS 2 Humble is required.  
+Ubuntu 22.04 + ROS 2 Humble is required.
 :::
 #### 1.1 ROS 2 installation
 Please follow the [installation document for ROS Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html) or use the [unofficial ROS 2 installation script](https://github.com/Tiryoh/ros2_setup_scripts_ubuntu).
@@ -72,10 +72,10 @@ colcon build --symlink-install
 Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.  
 <details>
 <summary>Click here for Mini Pupper Setup</summary>
-:::note
-Do not apply these Mini Pupper Setup commands to your PC.
-Ubuntu 22.04 + ROS 2 Humble is required.  
-:::
+**Note**
+> Do not apply these Mini Pupper Setup commands to your PC.
+> Ubuntu 22.04 + ROS 2 Humble is required.  
+
 
 #### 2.1 mini_pupper_bsp installation
 You should first install dependencies of servos, battery moniter and display screen.  
