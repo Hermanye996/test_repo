@@ -39,8 +39,9 @@ PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupp
 <details>
 <summary>Click here for PC Setup</summary>
 
+**Notes:**
+
 ```diff
-- Notes:
 - Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 - Ubuntu 22.04 + ROS 2 Humble is required.
 ```
@@ -74,8 +75,10 @@ colcon build --symlink-install
 Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.  
 <details>
 <summary>Click here for Mini Pupper Setup</summary>
+
+**Notes:**
+
 ```diff
-- Notes:
 - Do not apply these Mini Pupper Setup commands to your PC.
 - Ubuntu 22.04 + ROS 2 Humble is required.  
 ```
@@ -111,10 +114,11 @@ sudo apt-get install ros-humble-teleop-twist-keyboard
 pip install transforms3d
 colcon build --symlink-install
 ```
+**Tips:**
 ```diff
-- Notes:
-- If the Raspberry Pi has less than 4GB memory:
-- Try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install` instead of `colcon build --symlink-install`
+
++ If the Raspberry Pi has less than 4GB memory:
++ Try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install` instead of `colcon build --symlink-install`
 ```
 
 </details>
