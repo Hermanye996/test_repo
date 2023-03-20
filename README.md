@@ -38,7 +38,7 @@ This repository contains the ROS 2 packages for Mini Pupper.
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
 <summary>Click here for PC Setup</summary>
-```diff\n-
+```diff-
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 Ubuntu 22.04 + ROS 2 Humble is required.
 ```
