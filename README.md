@@ -129,7 +129,7 @@ To try the Mini Pupper ROS2, follow these steps to run the examples.
 
 
 
-### 1. PC
+### 1. PC [NOT AVAILABLE NOW]
 **These steps are only for PC.**
 <details>
 <summary>Click here for examples on PC</summary>
