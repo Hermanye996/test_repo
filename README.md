@@ -31,7 +31,6 @@ This repository contains the ROS 2 packages for Mini Pupper.
 
 
 
-> **Note:** This is a note block.
 
 
 ### 1. PC Setup
@@ -39,7 +38,8 @@ This repository contains the ROS 2 packages for Mini Pupper.
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
 <summary>Click here for PC Setup</summary>
-> **Note:** This is a note block.
+```note
+这里是您要突出显示的文本。
 
 :::note
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
