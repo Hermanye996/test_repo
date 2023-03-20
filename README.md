@@ -1,4 +1,5 @@
-
+>[!NOTE]
+> This is a note message.
 [![ROS2 VERSION](https://img.shields.io/badge/ROS-ROS%202%20Humble-brightgreen)](http://docs.ros.org/en/humble/index.html)
 &nbsp;
 [![Ubuntu VERSION](https://img.shields.io/badge/Ubuntu-22.04-green)](https://ubuntu.com/)
@@ -38,8 +39,7 @@ This repository contains the ROS 2 packages for Mini Pupper.
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
 <summary>Click here for PC Setup</summary>
-> [!NOTE]
-> This is a note message.
+
 :::note
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 Ubuntu 22.04 + ROS 2 Humble is required.
