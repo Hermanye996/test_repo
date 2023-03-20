@@ -38,10 +38,9 @@ This repository contains the ROS 2 packages for Mini Pupper.
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
 <summary>Click here for PC Setup</summary>
-<div style="background-color:#ffe6e6; padding:10px;">
-<b>Note:</b> This is a colored note box.
-</div>
+
 ```diff
+- Notes:
 - Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 - Ubuntu 22.04 + ROS 2 Humble is required.
 ```
@@ -75,10 +74,11 @@ colcon build --symlink-install
 Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.  
 <details>
 <summary>Click here for Mini Pupper Setup</summary>
-> **Note**
-> Do not apply these Mini Pupper Setup commands to your PC.
-> Ubuntu 22.04 + ROS 2 Humble is required.  
-
+```diff
+- Notes:
+- Do not apply these Mini Pupper Setup commands to your PC.
+- Ubuntu 22.04 + ROS 2 Humble is required.  
+```
 
 #### 2.1 mini_pupper_bsp installation
 You should first install dependencies of servos, battery moniter and display screen.  
@@ -111,11 +111,11 @@ sudo apt-get install ros-humble-teleop-twist-keyboard
 pip install transforms3d
 colcon build --symlink-install
 ```
-:::tip
-If the Raspberry Pi has less than 4GB memory
-try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install` 
-instead of `colcon build --symlink-install`
-:::
+```diff
+- Notes:
+- If the Raspberry Pi has less than 4GB memory:
+- Try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install` instead of `colcon build --symlink-install`
+```
 
 </details>
 
@@ -173,14 +173,14 @@ ros2 launch mini_pupper_navigation slam.launch.py use_sim_time:=true
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control robot dog with your keyboard
 ```
-:::tip
+
 If you want to save the map:
 ```bash
 ros2 service call /finish_trajectory cartographer_ros_msgs/srv/FinishTrajectory "{trajectory_id: 0}"
 ros2 service call /write_state cartographer_ros_msgs/srv/WriteState "{filename: '${HOME}/mymap.pbstream'}"
 ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 ```
-:::
+
 
 
 </details>
