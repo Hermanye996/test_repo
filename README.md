@@ -37,7 +37,7 @@ This repository contains the ROS2 packages for Mini Pupper.
 
 PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
 <details>
-<summary>Click here for PC PC Setup</summary>
+<summary>**Click here for PC Setup**</summary>
 :::note
 Do not apply these PC Setup commands to your Raspberry Pi on Mini Pupper.
 Ubuntu 22.04 + ROS 2 Humble is required.  
@@ -70,6 +70,8 @@ colcon build --symlink-install
 
 
 Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.  
+<details>
+<summary>**Click here for Mini Pupper Setup**</summary>
 :::note
 Do not apply these Mini Pupper Setup commands to your PC.
 Ubuntu 22.04 + ROS 2 Humble is required.  
@@ -112,7 +114,7 @@ try `MAKEFLAGS=-j1 colcon build --executor sequential --symlink-install`
 instead of `colcon build --symlink-install`
 :::
 
-
+<details>
 
 
 
