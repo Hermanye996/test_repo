@@ -12,9 +12,8 @@
 
 # Mini Pupper ROS 2
 
-Mini Pupper is an open source 12-DOF quadruped robot,supporting ROS 2 (Robot Operating System) designed for educational purposes, research and experimentation.
-With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on Stanford QuadrupedRobot project.  
-This branch of mini_pupper_ros repository contains the ROS 2 packages for Mini Pupper.
+Mini Pupper is an open-source 12-DOF quadruped robot, supporting ROS 2 (Robot Operating System) designed for educational purposes, research, and experimentation. With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on the Stanford QuadrupedRobot project.
+This branch of the mini_pupper_ros repository contains the ROS 2 packages for Mini Pupper.
 
 
 ## Features
@@ -24,18 +23,16 @@ This branch of mini_pupper_ros repository contains the ROS 2 packages for Mini P
 
 
 ## Installation
-
-* To use Gazebo simulator, "1. PC Setup" is required.
+* To use the Gazebo simulator, "1. PC Setup" is required.
 * To control Mini Pupper, "2. Mini Pupper Setup" is required.
 * To control Mini Pupper using visualize tools, "1. PC Setup" and "2. Mini Pupper Setup" is required.
 
 
 
 
-
 ### 1. PC Setup
 
-PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or execute simulator.  
+PC Setup corresponds to PC (your desktop or laptop PC) for controlling Mini Pupper remotely or executing the simulator.   
 <details>
 <summary>Click here for PC Setup</summary>
 
@@ -87,12 +84,12 @@ Mini Pupper Setup corresponds to the Raspberry Pi on your Mini Pupper.
 **Notes:**
 
 ```diff
-- Do not apply these Mini Pupper Setup commands to your PC.
+- Do not apply these Mini Pupper setup commands to your PC.
 - Ubuntu 22.04 + ROS 2 Humble is required.  
 ```
 
 #### 2.1 mini_pupper_bsp installation
-You should first install dependencies of servos, battery moniter and display screen.  
+You should first install dependencies of servos, battery monitor, and display screen.  
 See [mini_pupper_bsp](https://github.com/mangdangroboticsclub/mini_pupper_bsp).
 
 #### 2.2 ROS 2 installation
@@ -107,7 +104,7 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/mangdangroboticsclub/mini_pupper_ros.git -b ros2
 vcs import < mini_pupper_ros/.minipupper.repos --recursive  # requires vcstool
-# compiling gazebo and cartographer on Raspberry Pi is not recommended
+# compiling the gazebo and cartographer on Raspberry Pi is not recommended
 touch mini_pupper_ros/mini_pupper_gazebo/AMENT_IGNORE
 touch mini_pupper_ros/mini_pupper_navigation/AMENT_IGNORE
 ```
@@ -154,7 +151,7 @@ To try the Mini Pupper ROS2, follow these steps to run the examples.
 
 
 #### 1.1 Test in Rviz2
-View Mini Pupper model in Rviz2 and control it with keyboard.
+View the Mini Pupper model in Rviz2 and control it with a keyboard.
 ```bash
 # Terminal 1
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
@@ -168,7 +165,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 
 #### 1.2 Test in Gazebo
-Control the mini pupper in Gazebo with keyboard.
+Control the mini pupper in Gazebo with a keyboard.
 ```bash
 # Terminal 1
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
@@ -180,7 +177,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
 #### 1.3  Test Cartographer in Gazebo
-Try SLAM in Gazebo with keyboard.
+Try SLAM in Gazebo with a keyboard.
 
 ```bash
 # Terminal 1
@@ -193,7 +190,7 @@ ros2 launch mini_pupper_navigation slam.launch.py use_sim_time:=true
 
 # Terminal 3
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
-# Then control robot dog with your keyboard
+# Then control the pupper with your keyboard
 ```
 
 
@@ -205,7 +202,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ### 2. Mini Pupper
 **These steps are only for real Mini Pupper.**
 <details>
-<summary>Click here for examples on real Mini Pupper</summary>
+<summary>Click here for examples of real Mini Pupper</summary>
 
 #### 2.1 Test walk
 
@@ -221,7 +218,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control Mini Pupper with the keyboard
 ```
 #### 2.2 Test Mapping
-  - bringup on real mini pupper
+  - bring up on real mini pupper
  ```bash
 . ~/ros2_ws/install/setup.bash
 ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
@@ -231,7 +228,7 @@ ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation slam.launch.py  # on PC
  ```
- If you want to use PC keyboard to control Mini Pupper:
+ If you want to use a PC keyboard to control Mini Pupper:
 ```bash
 # Terminal (on PC)
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -244,7 +241,7 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 ```
 #### 2.3 Test Navigation
  - Replace the mymap files
- Remember to replace the mymap.pbstream in the maps folder with your own mymap.pbstream first.
+ Remember to replace the mymap.pbstream in the maps folder with your mymap.pbstream first.
  ```bash
  sudo cp ~/mymap.pgm ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pgm
  sudo cp ~/mymap.pbstream ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pbstream
