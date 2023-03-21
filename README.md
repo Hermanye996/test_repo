@@ -248,7 +248,7 @@ ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
  ```bash
  sudo cp ~/mymap.pgm ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pgm
  sudo cp ~/mymap.pbstream ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pbstream
- sudo cp ~/mymap.mymap.yaml ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.mymap.yaml
+ sudo cp ~/mymap.yaml ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.mymap.yaml
  ```
   ```bash
  . ~/ros2_ws/install/setup.bash
