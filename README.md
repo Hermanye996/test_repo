@@ -12,7 +12,7 @@
 
 # Mini Pupper ROS 2
 
-Mini Pupper is an open-source 12-DOF quadruped robot, supporting ROS 2 (Robot Operating System) designed for educational purposes, research, and experimentation. With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on the Stanford QuadrupedRobot project.
+Mini Pupper is an open-source 12-DOF quadruped robot, supporting ROS 2 (Robot Operating System) designed for educational purposes, research, and experimentation. With ROS 2, you can explore SLAM and Navigation functions with Mini Pupper. The controller of Mini Pupper's ROS packages is based on the Stanford QuadrupedRobot project.  
 This branch of the mini_pupper_ros repository contains the ROS 2 packages for Mini Pupper.
 
 
@@ -156,10 +156,11 @@ View the Mini Pupper model in Rviz2 and control it with a keyboard.
 # Terminal 1
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
 ros2 launch mini_pupper_bringup bringup.launch.py joint_hardware_connected:=false rviz:=true
-
+```
+```bash
 # Terminal 2
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
-# Then control robot dog with the keyboard
+# Then control the pupper with the keyboard
 ```
 
 
@@ -202,7 +203,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ### 2. Mini Pupper
 **These steps are only for real Mini Pupper.**
 <details>
-<summary>Click here for examples of real Mini Pupper</summary>
+<summary>Click here for examples on real Mini Pupper</summary>
 
 #### 2.1 Test walk
 
@@ -212,48 +213,63 @@ Open 2 terminals and ssh login to Mini Pupper on both.
 # Terminal 1 (ssh to real mini pupper)
 . ~/ros2_ws/install/setup.bash # setup.zsh if you use zsh instead of bash
 ros2 launch mini_pupper_bringup bringup.launch.py
-
+```
+```bash
 # Terminal 2 (on PC)
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
-# Then control Mini Pupper with the keyboard
+# Then control the Mini Pupper with the keyboard
 ```
 #### 2.2 Test Mapping
-  - bring up on real mini pupper
+  - Bring up real mini pupper
  ```bash
+ # Terminal 1 (ssh to real mini pupper)
 . ~/ros2_ws/install/setup.bash
 ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
  ```
   - Mapping on PC
  ```bash
+ # Terminal 2 (on PC)
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation slam.launch.py  # on PC
  ```
- If you want to use a PC keyboard to control Mini Pupper:
+ - Keyboard control  
+Use the keyboard to remotely control the mini pupper to complete the mapping.
 ```bash
-# Terminal (on PC)
+# Terminal 3 (on PC)
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
-  If you want to save the map:
+- Save the map  
+If you want to save the map:
 ```bash
+# Terminal 4 (on PC)
 ros2 service call /finish_trajectory cartographer_ros_msgs/srv/FinishTrajectory "{trajectory_id: 0}"
 ros2 service call /write_state cartographer_ros_msgs/srv/WriteState "{filename: '${HOME}/mymap.pbstream'}"
 ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
 ```
 #### 2.3 Test Navigation
- - Replace the mymap files
+   - Bring up real mini pupper
+ ```bash
+ # Terminal 1 (ssh to real mini pupper)
+. ~/ros2_ws/install/setup.bash
+ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
+ ```
+ - Replace the mymap files  
  Remember to replace the mymap.pbstream in the maps folder with your mymap.pbstream first.
  ```bash
+ # Terminal 2 (on PC)
  sudo cp ~/mymap.pgm ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pgm
  sudo cp ~/mymap.pbstream ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pbstream
- sudo cp ~/mymap.yaml ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.mymap.yaml
+ sudo cp ~/mymap.yaml ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.yaml
  ```
- - Launch localization.launch.py
+ - Localization
   ```bash
+ # Terminal 3 (on PC)
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation localization.launch.py  # on PC
  ```
- - Start Navigation
+ - Navigation
   ```bash
+ # Terminal 4 (on PC)
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation navigation.launch.py  # on PC
  ```
