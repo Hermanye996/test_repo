@@ -228,16 +228,19 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 #### 2.2 Test Navigation
  - bringup on real mini pupper
  ```bash
-ros2 launch mini_pupper_bringup bringup.launch  # on real mini pupper
+. ~/ros2_ws/install/setup.bash
+ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
  ```
  - Mapping on PC
  ```bash
- ros2 launch mini_pupper_navigation slam.launch  # on PC
+ . ~/ros2_ws/install/setup.bash
+ ros2 launch mini_pupper_navigation slam.launch.py  # on PC
  ```
  - Navigation on PC
  Remember to replace the mymap.pbstream in the maps folder with your own mymap.pbstream first.
   ```bash
- ros2 launch mini_pupper_navigation navigation.launch  # on PC
+ . ~/ros2_ws/install/setup.bash
+ ros2 launch mini_pupper_navigation navigation.launch.py  # on PC
  ```
 
  
