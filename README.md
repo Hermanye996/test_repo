@@ -196,12 +196,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Then control robot dog with your keyboard
 ```
 
-If you want to save the map:
-```bash
-ros2 service call /finish_trajectory cartographer_ros_msgs/srv/FinishTrajectory "{trajectory_id: 0}"
-ros2 service call /write_state cartographer_ros_msgs/srv/WriteState "{filename: '${HOME}/mymap.pbstream'}"
-ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
-```
+
 
 
 
@@ -236,8 +231,25 @@ ros2 launch mini_pupper_bringup bringup.launch.py  # on real mini pupper
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation slam.launch.py  # on PC
  ```
+ If you want to use PC keyboard to control Mini Pupper:
+```bash
+# Terminal (on PC)
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+ 
+ If you want to save the map:
+```bash
+ros2 service call /finish_trajectory cartographer_ros_msgs/srv/FinishTrajectory "{trajectory_id: 0}"
+ros2 service call /write_state cartographer_ros_msgs/srv/WriteState "{filename: '${HOME}/mymap.pbstream'}"
+ros2 run nav2_map_server map_saver_cli -f ${HOME}/mymap
+```
  - Navigation on PC
  Remember to replace the mymap.pbstream in the maps folder with your own mymap.pbstream first.
+ ```bash
+ sudo cp ~/mymap.pgm ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pgm
+ sudo cp ~/mymap.pbstream ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.pbstream
+ sudo cp ~/mymap.mymap.yaml ~/ros2_ws/src/mini_pupper_ros/mini_pupper_navigation/maps/mymap.mymap.yaml
+ ```
   ```bash
  . ~/ros2_ws/install/setup.bash
  ros2 launch mini_pupper_navigation navigation.launch.py  # on PC
